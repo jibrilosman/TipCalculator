@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+    background: var(--light-grayish-cyan);
+    /* text-align: center; */
+    overflow-x: hidden;
+}
+.imgLogo {
+    display: block;
+    margin: 3rem auto;
+}
+.container {
+    width: 70%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin: 0 auto;
+    padding: 5px;
+   background: var(--white);
+   border-radius: 15px;
+   box-shadow: 2px 2px 10px var(--grayish-cyan);
+}
+.leftItems {
+    width: 100%;
+    padding: 10px 20px;
+}
+    .leftItems > form > label {
+        position: relative;
+        font-size: 13px;
+        color: var(--dark-grayish-cyan);
+    }
+
+#numOfPeople,
+#billAmount {
+    width: 80%;
+    background: var(--very-light-grayish-cyan);
+    border: none;
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: var(--very-dark-cyan);
+    text-align: right;
+    outline: none;
+}
+    #numOfPeople:focus {
+        border: 3px solid var(--dark-grayish-cyan);
+    }
+    #billAmount:focus {
+         border: 3px solid var(--dark-grayish-cyan);
+    }
+
+
+svg {
+    position: absolute;
+    top: 35%;
+    left: 7%;
+}
+.fa-solid {
+    position: absolute;
+    left: 7%;
+    top: 60%;
+}
+.leftItems  button {
+    width: 40%;
+    padding: 10px;
+    background: var(--very-dark-cyan);
+    border: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    font-family: 'Space Mono', monospace;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    transform: translateY(2px);
+    transition: all .3s ease-in-out;
+}
+
+#custom {
+    width: 90px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.rightItems {
+   width: 95%;
+   background: var(--very-dark-cyan);
+   margin: 1rem auto;
+   border-radius: 12px;
+   padding: 20px 5px;
+}
+.tip {
+    font-size: 14px;
+    line-height: 0.5;
+}
+   .tip > input {
+       width: 80px;
+       float: right;
+       background: none;
+       outline: none;
+       border: none;
+       font-size: 38px ;
+       font-weight: 700;
+       color: var(--strong-cyan);
+       text-align: right;
+       padding: 10px;
+   }
+   .tip > input::placeholder {
+       color: var(--strong-cyan);
+   }
+   .tip > b {
+       color: var(--white);
+       padding: 10px;
+    }
+    .tip > p {
+        color: var(--grayish-cyan);
+        padding: 10px;
+   }
+.reset {
+    width: 100%;
+    margin: 0 0.5rem;
+}
+#reset {
+    width: 96%;
+    padding: 10px;
+    background: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    font-size: 18px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    outline: 0;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+}   
+#reset:hover {
+    background-color: var(--light-grayish-cyan);
+    color: var(--strong-cyan);
+    transform: translateY(2px);
+    transition: all .3s ease-in-out;
+}
+
+#result {
+    position: relative;
+    left: 35%;
+    color: var(--strong-cyan);
+}
+#totalResult {
+    position: relative;
+    left: 50%;
+    color: var(--strong-cyan);
+
+}
+.attribution {
+     font-size: 14px; 
+     text-align: center;
+}
+.attribution a { 
+    color: hsl(246, 100%, 51%); 
+}
+small {
+    color: #BF2D39;
+}
+.small {
+    font-size: 12px;
+    color: #BF2D39;
+    position: relative;
+    left: 5%;
+}
+
+
+
+@media (min-width: 913px) {
+    .container {
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+    #custom {
+        width: 36%;
+    }
+    svg {
+        top: 36%;
+        left: 18%;
+    }
+    .fa-solid {
+        position: absolute;
+        left: 3%;
+        top: 65%;
+    }
+
+    .tip {
+        font-size: 24px;
+    }
+    .tip > input {
+        font-size: 26px;
+    }
+    #reset {
+        width: 490px;
+        font-size: 24px;
+    }
+    .small {
+        left: 30%;
+    }
+}
