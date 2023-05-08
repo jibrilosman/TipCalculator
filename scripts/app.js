@@ -35,7 +35,7 @@ function CalcTipPercent(btn) {
     let percentNumber = parseInt(btn.innerText);
     let tipAmount = billValue * (percentNumber / 100) / personValue;
     let tipAmountPerPerson = tipAmount / personValue;
-    let totalAmount = billValue / personValue + tipAmountPerPerson;
+    let totalAmount = billValue / personValue + tipAmount;
     displayTipAmount.innerHTML = `$${tipAmount.toFixed(2)}`;
     displayTotalAmount.innerHTML = `$${totalAmount.toFixed(2)}`;
 
